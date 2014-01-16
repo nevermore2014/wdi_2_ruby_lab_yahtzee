@@ -17,7 +17,7 @@ class YahtzeeRoll
 		when :pair
 			@dice.each do |i|
 				@dice.count(i) == 2 ? sum += i : sum += 0
-			end
+		end
 		end
 		sum
 	end

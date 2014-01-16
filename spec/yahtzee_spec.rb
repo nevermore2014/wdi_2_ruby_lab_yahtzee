@@ -16,6 +16,11 @@ describe YahtzeeRoll do
 			two_pair = YahtzeeRoll.new(2,2,5,5,1)
 			expect(one_pair.scoring(:pair)).to eq 4
 			expect(two_pair.scoring(:pair)).to eq 14
-		end	
+		end
+
+		it 'returns the sum of 3 when :three is selected' do
+			three = YahtzeeRoll.new(2,2,5,5,5)
+			expect(three.scoring(:three)).to eq 15
+		end
 	end
 end
