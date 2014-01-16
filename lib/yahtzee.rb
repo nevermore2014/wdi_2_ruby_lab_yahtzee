@@ -13,4 +13,8 @@ class YahtzeeRoll
 		@dice4 = dice[3]
 		@dice5 = dice[4]
 	end
+
+	def scoring(category)
+		4
+	end
 end

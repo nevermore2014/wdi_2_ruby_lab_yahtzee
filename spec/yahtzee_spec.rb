@@ -9,4 +9,13 @@ describe YahtzeeRoll do
 			expect{ YahtzeeRoll.new(7, 7, 7, 7, 7)}.to raise_error 'invalid value of dice'
 		end
 	end
+
+	describe '#scoring' do
+		it 'Score the sum of the two highest matching dice when :pair' do
+			one_pair = YahtzeeRoll.new(2,2,3,4,5)
+			two_pair = YahtzeeRoll.new(2,2,5,5,1)
+			expect(one_pair.scoring(:pair)).to eq 4
+			expect(two_pair.scoring(:pair)).to eq 10
+		end	
+	end
 end
