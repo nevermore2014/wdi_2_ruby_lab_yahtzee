@@ -25,15 +25,15 @@ describe YahtzeeRoll do
 
 		it 'returns the sum of 4 when :three is selected' do
 			four = YahtzeeRoll.new(2,5,5,5,5)
-			expect(three.scoring(:four)).to eq 20
+			expect(four.scoring(:four)).to eq 20
 		end
 
 		it 'returns the sum of 5 when straight is selected' do
 			straight = YahtzeeRoll.new(1,2,3,4,5)
-			expect(three.scoring(:three)).to eq 15
+			expect(straight.scoring(:small_straight)).to eq 15
 		end
 
-	
+
 
 	end
 end
