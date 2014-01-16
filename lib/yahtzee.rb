@@ -4,6 +4,9 @@ class YahtzeeRoll
 
 	def initialize(*dice)
 		raise 'invalid number of dice' if dice.length != 5
+		dice.each do |d|
+			raise 'invalid value of dice' if (1..6).include?(d)
+		end
 		@dice1 = dice[0]
 		@dice2 = dice[1]
 		@dice3 = dice[2]
