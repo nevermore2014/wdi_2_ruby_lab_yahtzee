@@ -33,6 +33,10 @@ describe YahtzeeRoll do
 			expect(straight.scoring(:small_straight)).to eq 15
 		end
 
+		it 'returns the 20 for a large straight' do
+			straight = YahtzeeRoll.new(2,3,4,5,6)
+			expect(straight.scoring(:large_straight)).to eq 20
+		end
 
 
 	end
