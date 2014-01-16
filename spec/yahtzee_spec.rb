@@ -15,7 +15,7 @@ describe YahtzeeRoll do
 			one_pair = YahtzeeRoll.new(2,2,3,4,5)
 			two_pair = YahtzeeRoll.new(2,2,5,5,1)
 			expect(one_pair.scoring(:pair)).to eq 4
-			expect(two_pair.scoring(:pair)).to eq 10
+			expect(two_pair.scoring(:pair)).to eq 14
 		end	
 	end
 end

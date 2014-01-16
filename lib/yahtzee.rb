@@ -1,5 +1,5 @@
 class YahtzeeRoll
-	attr_accessor :dice1, :dice2, :dice3, :dice4, :dice5
+	attr_accessor :dice
 
 
 	def initialize(*dice)
@@ -7,14 +7,18 @@ class YahtzeeRoll
 		dice.each do |d|
 			raise 'invalid value of dice' unless (1..6).include?(d)
 		end
-		@dice1 = dice[0]
-		@dice2 = dice[1]
-		@dice3 = dice[2]
-		@dice4 = dice[3]
-		@dice5 = dice[4]
+		@dice = dice
+		
 	end
 
 	def scoring(category)
-		4
+		sum = 0
+		case category
+		when :pair
+			@dice.each do |i|
+				@dice.count(i) == 2 ? sum += i : sum += 0
+			end
+		end
+		sum
 	end
 end
