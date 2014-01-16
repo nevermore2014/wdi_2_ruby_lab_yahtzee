@@ -34,6 +34,15 @@ class YahtzeeRoll
 				@dice.each do |i|
 					sum += i if @dice.sort == [2,3,4,5,6]
 				end
+			when :full_house
+				counts = []
+				@dice.each do |i|
+					counts << @dice.count(i) if @dice.count(i) == 2 || @dice.count(i) == 3
+				end
+				counts.sort!.uniq!
+				@dice.each do |i|
+					sum += i if counts == [2,3]
+				end
 		end
 		sum
 	end

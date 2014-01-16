@@ -38,6 +38,10 @@ describe YahtzeeRoll do
 			expect(straight.scoring(:large_straight)).to eq 20
 		end
 
+		it 'returns score the sum of the dice for a full_house if one pair and three of a kind' do
+			roll = YahtzeeRoll.new(2,2,3,3,3)
+			expect(roll.scoring(:full_house)).to eq 13
+		end
 
 	end
 end
