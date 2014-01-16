@@ -43,5 +43,11 @@ describe YahtzeeRoll do
 			expect(roll.scoring(:full_house)).to eq 13
 		end
 
+		it 'returns score the sum of the dice for a Yahtzee if one kind' do
+			ya = YahtzeeRoll.new(2,2,2,2,2)
+			expect(ya.scoring(:yahtzee)).to eq 50
+		end
+
+
 	end
 end

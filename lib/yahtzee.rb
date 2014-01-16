@@ -43,6 +43,10 @@ class YahtzeeRoll
 				@dice.each do |i|
 					sum += i if counts == [2,3]
 				end
+			when :yahtzee
+				@dice.each do |i|
+					sum = 50 if @dice.count(i) == 5
+				end
 		end
 		sum
 	end
