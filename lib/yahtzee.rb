@@ -30,6 +30,10 @@ class YahtzeeRoll
 				@dice.each do |i|
 					sum += i if @dice.sort == [1,2,3,4,5]
 				end
+			when :large_straight
+				@dice.each do |i|
+					sum += i if @dice.sort == [2,3,4,5,6]
+				end
 		end
 		sum
 	end
